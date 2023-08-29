@@ -1,13 +1,12 @@
 import streamlit as st
 import db
 import re
-import streamlit_authenticator as stauth
 
     
 d=db.fetch_user()
 
 status=None
-
+st.session_state
 def app(un):
     st.write(f'hello {un}  ')
     if st.sidebar.button('Logout'):
