@@ -123,7 +123,7 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 secret.py
-secretes.toml
+.streamlit/secretes.toml
 
 # Environments
 .env
