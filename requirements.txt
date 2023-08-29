@@ -5,3 +5,4 @@ streamlit ==1.26.0
 # Cython ==3.0.2
 deta== 1.2.0
 python-dotenv== 0.7.0
+ipython ==8.14.0
