@@ -3,4 +3,4 @@
 streamlit ==1.26.0
 # # wheel ==0.41.2
 # Cython ==3.0.2
-deta 1.2.0
+deta== 1.2.0
