@@ -3,7 +3,8 @@ import os
 import streamlit as st
 from deta import Deta
 import datetime
-
+from dotenv import load_dotenv
+load_dotenv(".env")
 key =os.getenv('Deta_key')
 
 deta= Deta(key)
