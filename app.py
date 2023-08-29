@@ -1,9 +1,10 @@
-# streamlit_app.py
 
+import os
 import streamlit as st
 from deta import Deta
 import datetime
-Deta_key ="d0tfyvz8ygw_Q3L9xn7PkZmmCQQzhFK9atpNn5TA5iG5"
+
+Deta_key =os.getenv('Deta_key')
 
 deta= Deta(Deta_key)
 
