@@ -7,6 +7,7 @@ import datetime
 
 load_dotenv(".env")
 DETA_KEY =os.getenv("DETA_KEY")
+
 st.write(DETA_KEY)
 print(DETA_KEY)
 # st.write(DETA_KEY)
@@ -36,6 +37,7 @@ def SignUp():
         password=st.text_input("Enter Yout Password",type="password")
         re_password=st.text_input("Re-Enter Yout Password",type="password")
 
+       
         if st.form_submit_button("Submit"):
             if password==re_password:
                         
