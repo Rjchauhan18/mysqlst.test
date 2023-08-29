@@ -1,36 +1,30 @@
-
-import os
 import streamlit as st
-from deta import Deta
-import datetime
-from dotenv import load_dotenv
-load_dotenv(".env")
-DETA_KEY =os.getenv("DETA_KEY")
+import db
 
-# st.write(DETA_KEY)
-deta= Deta(DETA_KEY)
+d=db.fetch_user()
+with st.expander("See the data"):
+    st.write(d)
+
+def SignUp():
+    with st.form(key="SignUp"):
+        user=st.text_input("Enter Yout Username")
+        Fullname=st.text_input("Enter Yout Full anme")
+        email=st.text_input("Enter Yout Email ID")
+        password=st.text_input("Enter Yout Password",type="password")
+        re_password=st.text_input("Re-Enter Yout Password",type="password")
+
+        if st.form_submit_button("Submit"):
+            if password==re_password:
+                        
+                db.insert_user(user,Fullname,email,password)
+                st.info("User successfully inserted")
+                st.balloons()
 
 
-db=deta.Base("auth")
+with st.container():
+    login,signup=st.tabs(["Login", "SignUp"])
 
-def insert_user(username,email,password):
-    date_join=str(datetime.datetime.now()) 
-    db.put({"Username":username,"EmailID":email,"Password":password,"Date of join":date_join})
-
-
-def fetch_user():
-    users=db.fetch()
-    return users.items
-
-d=fetch_user()
-st.write(d)
-
-user=st.text_input("Enter Yout username")
-email=st.text_input("Enter Yout Email ID")
-password=st.text_input("Enter Yout Password",type="password")
-
-if st.button("submit"):
-    insert_user(user,email,password)
-    st.info("User successfully inserted")
-    st.balloons()
-    
+    with login:
+        st.write("Login ")
+    with signup:
+        SignUp()
