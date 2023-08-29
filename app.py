@@ -6,7 +6,7 @@ import re
 d=db.fetch_user()
 
 status=None
-st.session_state
+
 def app(un):
     st.write(f'hello {un}  ')
     if st.sidebar.button('Logout'):
