@@ -4,9 +4,9 @@ import streamlit as st
 from deta import Deta
 import datetime
 
-Deta_key =os.getenv('Deta_key')
+key =os.getenv('Deta_key')
 
-deta= Deta(Deta_key)
+deta= Deta(key)
 
 
 db=deta.Base("auth")
