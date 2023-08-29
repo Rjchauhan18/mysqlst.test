@@ -45,6 +45,8 @@ def SignUp():
                 st.info("User successfully inserted")
                 st.balloons()
 
+
+
 with st.container():
     login,signup=st.tabs(["Login", "SignUp"])
 
