@@ -12,7 +12,7 @@ db=deta.Base("auth")
 
 def insert_user(username,email,password):
     date_join=str(datetime.datetime.now()) 
-    return db.put(username,email,password,date_join)
+    db.put(username,email,password,date_join)
 
 
 user=st.text_input("Enter Yout username")
