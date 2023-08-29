@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv(".env")
 DETA_KEY =os.getenv("DETA_KEY")
 
-st.write(DETA_KEY)
+# st.write(DETA_KEY)
 deta= Deta(DETA_KEY)
 
 
