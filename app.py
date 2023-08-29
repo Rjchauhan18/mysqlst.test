@@ -5,7 +5,7 @@ from deta import Deta
 import datetime
 from dotenv import load_dotenv
 load_dotenv(".env")
-key =os.getenv('Deta_key')
+key =os.environ['Deta_key']
 st.write(key)
 deta= Deta(key)
 
