@@ -20,6 +20,9 @@ def app(un):
 # url='mysql+mysqlconnector://'+user+':'+password+'@'+host+'[:3306]/main_db'
 
 try:
+    # 192.168.0.134
+    
+    # mysql+pymysql://scott:tiger@localhost/foo
     # st.help(st.experimental_connection("mysql", type="sql"))
     
     # conn1 = st.experimental_connection("mysql", type="streamlit.connections.SQLConnection")

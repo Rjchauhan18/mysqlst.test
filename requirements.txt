@@ -2,10 +2,10 @@
 # git+https://github.com/PyMySQL/mysqlclient.git
 SQLAlchemy==2.0.20
 # mysqlclient ==1.3.1
-
+pymysql== 1.1.0
 streamlit ==1.26.0
 # Cython ==3.0.2
 deta== 1.2.0
 python-dotenv== 0.7.0
 ipython ==8.14.0
-mysql-connector ==2.2.9
+# mysql-connector ==2.2.9
