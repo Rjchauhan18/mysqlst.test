@@ -22,11 +22,14 @@ def app(un):
         st.experimental_rerun()
 
     
+try:
     cnx = mysql.connector.connect(user=user, password=password,
                                 host=host,
                                 database=database)
     st.write(cnx)
-    
+except:
+   conn = st.experimental_connection('mysql', type='sql')
+   st.write(conn)
 
  
 def check(email):
