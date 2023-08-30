@@ -29,8 +29,8 @@ try:
                                 database=database)
     st.write(cnx)
 except:
-#    conn = st.experimental_connection('mysql', type='sql')
-#    st.write(conn)
+   conn = st.experimental_connection('mysql', type='sql')
+   st.write(conn)
     pass
 
  
