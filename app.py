@@ -10,6 +10,7 @@ user=os.getenv("username")
 password=os.getenv("password")
 host=os.getenv("host")
 database=os.getenv("database")
+st.write(database)
 
 d=db.fetch_user()
 
