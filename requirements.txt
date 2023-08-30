@@ -6,3 +6,4 @@ streamlit ==1.26.0
 deta== 1.2.0
 python-dotenv== 0.7.0
 ipython ==8.14.0
+mysql-connector ==2.2.9

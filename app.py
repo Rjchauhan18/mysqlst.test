@@ -1,8 +1,16 @@
+import os
 import streamlit as st
 import db
 import re
+import mysql.connector
+from dotenv import load_dotenv
 
-    
+load_dotenv(".env")
+user=os.getenv("username")
+password=os.getenv("password")
+host=os.getenv("host")
+database=os.getenv("database")
+
 d=db.fetch_user()
 
 status=None
@@ -12,6 +20,12 @@ def app(un):
     if st.sidebar.button('Logout'):
         st.session_state.status=False
         st.experimental_rerun()
+
+    
+    cnx = mysql.connector.connect(user=username, password=password,
+                                host=host,
+                                database=database)
+    st.write(cnx)
     
 
  
