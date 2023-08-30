@@ -31,7 +31,7 @@ try:
 except:
    conn = st.experimental_connection('mysql', type='sql')
    st.write(conn)
-    pass
+    
 
  
 def check(email):
