@@ -1,6 +1,6 @@
 # wheel ==0.41.2
 # git+https://github.com/PyMySQL/mysqlclient.git
-# SQLAlchemy==2.0.20
+SQLAlchemy==2.0.20
 # mysqlclient ==1.3.1
 
 streamlit ==1.26.0
