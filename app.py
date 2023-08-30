@@ -47,7 +47,10 @@ try:
     # import streamlit as st
 
     # Initialize connection.
-    conn = st.experimental_connection('mysql', type='sql')
+    # conn = st.experimental_connection('mysql', type='sql')
+    
+    from streamlit.connections import SQLConnection
+    conn = st.experimental_connection("mysql", type=SQLConnection)
 
     # Perform query.
     df = conn.query('SELECT * from users;', ttl=600)
@@ -56,10 +59,10 @@ try:
     # for row in df.itertuples():
     #     # st.write(f"{row.name} has a :{row.pet}:")
     #     st.write(row)
-except:
+except Exception as e:
 #    conn = st.experimental_connection('mysql', type='sql')
 #    st.write(conn)
-    pass
+    st.write(e)
     
 
  
