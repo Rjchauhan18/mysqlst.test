@@ -22,7 +22,7 @@ def app(un):
         st.experimental_rerun()
 
     
-    cnx = mysql.connector.connect(user=username, password=password,
+    cnx = mysql.connector.connect(user=user, password=password,
                                 host=host,
                                 database=database)
     st.write(cnx)
