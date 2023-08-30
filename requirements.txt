@@ -1,3 +1,4 @@
+pkg-config
 wheel ==0.41.2
 
 SQLAlchemy==2.0.20
