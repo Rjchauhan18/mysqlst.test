@@ -1,7 +1,8 @@
-mysqlclient ==2.2.0
 SQLAlchemy==2.0.20
+mysqlclient ==2.2.0
+
 streamlit ==1.26.0
-# # wheel ==0.41.2
+wheel ==0.41.2
 # Cython ==3.0.2
 deta== 1.2.0
 python-dotenv== 0.7.0
