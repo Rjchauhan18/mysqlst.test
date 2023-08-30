@@ -2,7 +2,7 @@ import os
 import streamlit as st
 import db
 import re
-# import mysql.connector
+import mysql.connector
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
 
@@ -20,9 +20,8 @@ def app(un):
 # url='mysql+mysqlconnector://'+user+':'+password+'@'+host+'[:3306]/main_db'
 
 try:
+
     # 192.168.0.134
-    
-    # mysql+pymysql://scott:tiger@localhost/foo
     # st.help(st.experimental_connection("mysql", type="sql"))
     
     # conn1 = st.experimental_connection("mysql", type="streamlit.connections.SQLConnection")
