@@ -2,7 +2,7 @@ import os
 import streamlit as st
 import db
 import re
-import mysql.connector
+# import mysql.connector
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
 
