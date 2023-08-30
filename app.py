@@ -51,6 +51,7 @@ try:
 
     # Perform query.
     df = conn.query('SELECT * from stocks;', ttl=600)
+    st.write(len(df))
     
     # for row in df.itertuples():
     #     # st.write(f"{row.name} has a :{row.pet}:")
