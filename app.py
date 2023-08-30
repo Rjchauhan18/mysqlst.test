@@ -4,13 +4,7 @@ import db
 import re
 import mysql.connector
 from dotenv import load_dotenv
-
-load_dotenv(".env")
-user=os.getenv("username")
-password=os.getenv("password")
-host=os.getenv("host")
-database=os.getenv("database")
-st.write(database)
+from sqlalchemy import create_engine
 
 d=db.fetch_user()
 
@@ -21,13 +15,46 @@ def app(un):
     if st.sidebar.button('Logout'):
         st.session_state.status=False
         st.experimental_rerun()
+# st.write(st.secrets.connections.mysql.urls)
+# mysql+mysqlconnector://'++':<password>@<host>[:<port>]/<dbname>
+# url='mysql+mysqlconnector://'+user+':'+password+'@'+host+'[:3306]/main_db'
 
-    
 try:
-    cnx = mysql.connector.connect(user=user, password=password,
-                                host=host,
-                                database=database)
-    st.write(cnx)
+    # st.help(st.experimental_connection("mysql", type="sql"))
+    
+    # conn1 = st.experimental_connection("mysql", type="streamlit.connections.SQLConnection")
+    # st.write(conn1)
+    
+    # df = conn1.query('SELECT * from stock_app;', ttl=600)
+    # st.write(df)
+
+    # # Print results.
+    # for row in df.itertuples():
+    #     # st.write(f"{row.name} has a :{row.pet}:")
+    #     st.write(row)
+
+    # conn=create_engine(st.secrets.connections.mysql.urls)
+    # conn.connect()
+    # # st.write(conn)
+        
+    # conn.execute('SELECT  symbol,name from stocks;')
+    # myresult = conn.fetchall()
+    # st.write(myresult)
+    # cnx = mysql.connector.connect(user=st.secrets.username, password=st.secrets.password,
+    #                             host=st.secrets.host,
+    #                             database=st.secrets.database)
+    # st.write(cnx) 
+    # import streamlit as st
+
+    # Initialize connection.
+    conn = st.experimental_connection('mysql', type='sql')
+
+    # Perform query.
+    df = conn.query('SELECT * from stocks;', ttl=600)
+    
+    # for row in df.itertuples():
+    #     # st.write(f"{row.name} has a :{row.pet}:")
+    #     st.write(row)
 except:
    conn = st.experimental_connection('mysql', type='sql')
    st.write(conn)
