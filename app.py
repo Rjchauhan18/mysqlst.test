@@ -50,15 +50,16 @@ try:
     conn = st.experimental_connection('mysql', type='sql')
 
     # Perform query.
-    df = conn.query('SELECT * from stocks;', ttl=600)
+    df = conn.query('SELECT * from users;', ttl=600)
     st.write(len(df))
     
     # for row in df.itertuples():
     #     # st.write(f"{row.name} has a :{row.pet}:")
     #     st.write(row)
 except:
-   conn = st.experimental_connection('mysql', type='sql')
-   st.write(conn)
+#    conn = st.experimental_connection('mysql', type='sql')
+#    st.write(conn)
+    pass
     
 
  
